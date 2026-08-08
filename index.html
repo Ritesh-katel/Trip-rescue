@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Rescue</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">TRIP RESCUE</div>
+
+        <nav>w
+            <a href="#plan">Plan My Trip</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tag">YOUR TRIP, EVEN WHEN PLANS CHANGE</p>
+
+                <h1>
+                    Plans change.<br>
+                    <span>Your journey goes on.</span>
+                </h1>
+
+                <p class="hero-text">
+                    When weather, cancellations or unexpected changes
+                    disrupt your trip, Trip Rescue helps you find a new plan.
+                </p>
+
+                <a href="#plan" class="primary-btn">
+                    Plan My Trip →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="plan" class="plan-section">
+
+            <div class="section-heading">
+                <p class="tag">LET'S GET STARTED</p>
+
+                <h2>
+                    Tell us about your trip
+                </h2>
+
+                <p>
+                    We'll help you find the best way forward.
+                </p>
+            </div>
+
+
+            <div class="trip-card">
+
+                <div class="form-group">
+                    <label for="location">Where are you going?</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Pokhara"
+                    >
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="budget">Budget (NPR)</label>
+
+                        <input
+                            type="number"
+                            id="budget"
+                            placeholder="e.g. 5000"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="time">Available time</label>
+
+                        <input
+                            type="text"
+                            id="time"
+                            placeholder="e.g. 10 AM - 6 PM"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label>What do you enjoy?</label>
+
+                    <div class="interest-options">
+
+                        <button type="button" class="interest">
+                            🏔️ Nature
+                        </button>
+
+                        <button type="button" class="interest">
+                            🏛️ Culture
+                        </button>
+
+                        <button type="button" class="interest">
+                            🥾 Adventure
+                        </button>
+
+                        <button type="button" class="interest">
+                            🍜 Food
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <button id="startTrip" class="rescue-btn">
+                    Create My Trip
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="result" class="result-section hidden">
+
+            <div class="section-heading">
+
+                <p class="tag">YOUR TRIP</p>
+
+                <h2>Your current plan</h2>
+
+            </div>
+
+
+            <div class="itinerary-card">
+
+                <div class="trip-info">
+
+                    <h3 id="tripLocation">Pokhara</h3>
+
+                    <p id="tripDetails">
+                        NPR 5,000 · 10 AM - 6 PM
+                    </p>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div>
+                        <span class="time">10:00 AM</span>
+
+                        <h4>Paragliding</h4>
+
+                        <p>Adventure activity</p>
+                    </div>
+
+                    <span class="status">
+                        Planned
+                    </span>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div>
+                        <span class="time">2:00 PM</span>
+
+                        <h4>Sarangkot</h4>
+
+                        <p>Mountain viewpoint</p>
+                    </div>
+
+                    <span class="status">
+                        Planned
+                    </span>
+
+                </div>
+
+
+                <div class="problem-box">
+
+                    <div>
+                        <strong>⚠️ Something changed?</strong>
+
+                        <p>
+                            Your activity is no longer available.
+                        </p>
+                    </div>
+
+                    <button id="rescueBtn">
+                        Rescue My Trip
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="newPlan" class="new-plan hidden">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="tag">TRIP RESCUED</p>
+
+            <h2>
+                Here's your new plan
+            </h2>
+
+            <p>
+                We found alternatives that fit your time,
+                budget and interests.
+            </p>
+
+
+            <div class="new-itinerary">
+
+                <div class="new-activity">
+                    <span>10:00 AM</span>
+
+                    <div>
+                        <h3>International Mountain Museum</h3>
+                        <p>Culture · Indoor · NPR 500</p>
+                    </div>
+                </div>
+
+
+                <div class="new-activity">
+                    <span>12:30 PM</span>
+
+                    <div>
+                        <h3>Local Nepali Lunch</h3>
+                        <p>Food · Local experience · NPR 700</p>
+                    </div>
+                </div>
+
+
+                <div class="new-activity">
+                    <span>2:30 PM</span>
+
+                    <div>
+                        <h3>Phewa Lake & Lakeside Walk</h3>
+                        <p>Nature · Relaxing · NPR 300</p>
+                    </div>
+                </div>
+
+
+                <div class="new-activity">
+                    <span>5:00 PM</span>
+
+                    <div>
+                        <h3>Lakeside Sunset</h3>
+                        <p>Nature · Free</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 Trip Rescue · Plans change. The journey goes on.</p>
+
+    </footer>
+ <script src="script.js"></script>
+</body>
+</html>

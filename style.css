@@ -1,0 +1,665 @@
+ /* =========================
+   TRIP RESCUE
+   Main Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f4;
+    color: #17221b;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5e8e2;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #17221b;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.navbar nav a:hover {
+    color: #4f765d;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247, 248, 244, 0.98) 0%,
+            rgba(247, 248, 244, 0.92) 45%,
+            rgba(247, 248, 244, 0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #4f765d;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #4f765d;
+}
+
+.hero-text {
+    max-width: 540px;
+
+    font-size: 18px;
+    color: #5c655e;
+
+    margin-bottom: 35px;
+}
+
+.primary-btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    background: #17221b;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    background: #4f765d;
+}
+
+
+/* =========================
+   PLAN SECTION
+========================= */
+
+.plan-section {
+    padding: 120px 7%;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p:not(.tag) {
+    color: #687169;
+    font-size: 17px;
+}
+
+
+/* =========================
+   TRIP FORM CARD
+========================= */
+
+.trip-card {
+    max-width: 850px;
+
+    padding: 45px;
+
+    background: white;
+
+    border: 1px solid #e2e7e1;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(30, 45, 35, 0.08);
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #d8ded8;
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #fafbf9;
+
+    transition: 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #4f765d;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(79, 118, 93, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   INTEREST BUTTONS
+========================= */
+
+.interest-options {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.interest {
+    padding: 11px 16px;
+
+    border: 1px solid #d8ded8;
+    border-radius: 100px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.interest:hover {
+    border-color: #4f765d;
+
+    background: #f0f5f1;
+}
+
+.interest.selected {
+    background: #17221b;
+    color: white;
+
+    border-color: #17221b;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.rescue-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #4f765d;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.rescue-btn:hover {
+    background: #17221b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.result-section {
+    padding: 100px 7%;
+    background: #eef2ec;
+}
+
+.itinerary-card {
+    max-width: 850px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    border: 1px solid #dfe5df;
+}
+
+.trip-info {
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e9e5;
+}
+
+.trip-info h3 {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.trip-info p {
+    color: #69736c;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activity {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #e8ece8;
+}
+
+.activity h4 {
+    font-size: 19px;
+
+    margin-top: 3px;
+}
+
+.activity p {
+    color: #737c75;
+
+    font-size: 14px;
+}
+
+.time {
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: #4f765d;
+
+    letter-spacing: 1px;
+}
+
+.status {
+    padding: 6px 10px;
+
+    border-radius: 100px;
+
+    background: #edf5ef;
+
+    color: #4f765d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   PROBLEM BOX
+========================= */
+
+.problem-box {
+    margin-top: 30px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-radius: 12px;
+
+    background: #fff7e7;
+
+    border: 1px solid #f1dfb8;
+}
+
+.problem-box strong {
+    font-size: 15px;
+}
+
+.problem-box p {
+    margin-top: 3px;
+
+    color: #776d5b;
+
+    font-size: 13px;
+}
+
+.problem-box button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #17221b;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.problem-box button:hover {
+    background: #4f765d;
+}
+
+
+/* =========================
+   NEW PLAN
+========================= */
+
+.new-plan {
+    padding: 120px 7%;
+
+    background: #17221b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4f765d;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-plan .tag {
+    color: #a9c8b2;
+}
+
+.new-plan h2 {
+    font-size: clamp(38px, 5vw, 60px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.new-plan > p:not(.tag) {
+    max-width: 550px;
+
+    margin: 0 auto 45px;
+
+    color: #b7c1ba;
+}
+
+
+/* =========================
+   NEW ITINERARY
+========================= */
+
+.new-itinerary {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    color: #17221b;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: left;
+}
+
+.new-activity {
+    display: grid;
+
+    grid-template-columns: 110px 1fr;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    border-bottom: 1px solid #e5e8e5;
+}
+
+.new-activity:last-child {
+    border-bottom: none;
+}
+
+.new-activity > span {
+    color: #4f765d;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.new-activity h3 {
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+.new-activity p {
+    color: #707971;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 7%;
+
+    background: #111812;
+
+    color: #879289;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 650px;
+
+        padding: 70px 5%;
+
+        background-position: 65% center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .plan-section,
+    .result-section,
+    .new-plan {
+        padding: 80px 5%;
+    }
+
+    .trip-card {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .problem-box {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .problem-box button {
+        width: 100%;
+    }
+    .new-activity {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+}
