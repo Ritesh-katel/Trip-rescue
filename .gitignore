@@ -1,2 +1,9 @@
 node_modules/
+<<<<<<< HEAD
 .env
+=======
+.env.env
+.env
+.env
+node_modules/
+>>>>>>> 256a246 (Ignore environment and dependencies)
