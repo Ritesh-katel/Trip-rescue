@@ -57,6 +57,10 @@ body {
     font-size: 14px;
     font-weight: 600;
 
+    border: 1px solid #a9c8b2;
+    border-radius: 16px;
+    padding: 6px 18px;
+
     transition: 0.2s ease;
 }
 
@@ -239,6 +243,33 @@ body {
     grid-template-columns: 1fr 1fr;
 
     gap: 20px;
+}
+
+.input-action-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.input-action-wrapper input {
+    flex-grow: 1;
+}
+
+.location-btn {
+    padding: 0 18px;
+    background: #f0f5f1;
+    border: 1px solid #d8ded8;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-btn:hover {
+    border-color: #4f765d;
+    background: #e2ede5;
 }
 
 

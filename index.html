@@ -7,6 +7,7 @@
     <title>Trip Rescue</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -67,11 +68,16 @@
                 <div class="form-group">
                     <label for="location">Where are you going?</label>
 
-                    <input
-                        type="text"
-                        id="location"
-                        placeholder="e.g. Pokhara"
-                    >
+                    <div class="input-action-wrapper">
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="e.g. Pokhara"
+                        >
+                        <button type="button" id="getLocationBtn" class="location-btn" title="Use Current Location">
+                            <span class="material-symbols-outlined">my_location</span>
+                        </button>
+                    </div>
                 </div>
 
 
@@ -107,19 +113,19 @@
                     <div class="interest-options">
 
                         <button type="button" class="interest">
-                            🏔️ Nature
+                            <span class="material-symbols-outlined" style="vertical-align: middle;">landscape</span> Nature
                         </button>
 
                         <button type="button" class="interest">
-                            🏛️ Culture
+                            <span class="material-symbols-outlined" style="vertical-align: middle;">account_balance</span> Culture
                         </button>
 
                         <button type="button" class="interest">
-                            🥾 Adventure
+                            <span class="material-symbols-outlined" style="vertical-align: middle;">hiking</span> Adventure
                         </button>
 
                         <button type="button" class="interest">
-                            🍜 Food
+                            <span class="material-symbols-outlined" style="vertical-align: middle;">restaurant</span> Food
                         </button>
 
                     </div>
@@ -164,9 +170,9 @@
                     <div>
                         <span class="time">10:00 AM</span>
 
-                        <h4>Paragliding</h4>
+                        <h4 id="currentActivity1Title">Sightseeing</h4>
 
-                        <p>Adventure activity</p>
+                        <p id="currentActivity1Desc">Adventure activity</p>
                     </div>
 
                     <span class="status">
@@ -181,9 +187,9 @@
                     <div>
                         <span class="time">2:00 PM</span>
 
-                        <h4>Sarangkot</h4>
+                        <h4 id="currentActivity2Title">Local exploration</h4>
 
-                        <p>Mountain viewpoint</p>
+                        <p id="currentActivity2Desc">Mountain viewpoint</p>
                     </div>
 
                     <span class="status">
@@ -196,7 +202,7 @@
                 <div class="problem-box">
 
                     <div>
-                        <strong>⚠️ Something changed?</strong>
+                        <strong><span class="material-symbols-outlined" style="vertical-align: middle;">warning</span> Something changed?</strong>
 
                         <p>
                             Your activity is no longer available.
@@ -217,7 +223,7 @@
         <section id="newPlan" class="new-plan hidden">
 
             <div class="success-icon">
-                ✓
+                <span class="material-symbols-outlined">check_circle</span>
             </div>
 
             <p class="tag">TRIP RESCUED</p>
@@ -238,8 +244,8 @@
                     <span>10:00 AM</span>
 
                     <div>
-                        <h3>International Mountain Museum</h3>
-                        <p>Culture · Indoor · NPR 500</p>
+                        <h3 id="newActivity1Title">Indoor Museum</h3>
+                        <p id="newActivity1Desc">Culture · Indoor · NPR 500</p>
                     </div>
                 </div>
 
@@ -248,8 +254,8 @@
                     <span>12:30 PM</span>
 
                     <div>
-                        <h3>Local Nepali Lunch</h3>
-                        <p>Food · Local experience · NPR 700</p>
+                        <h3 id="newActivity2Title">Local Restaurant</h3>
+                        <p id="newActivity2Desc">Food · Local experience · NPR 700</p>
                     </div>
                 </div>
 
@@ -258,8 +264,8 @@
                     <span>2:30 PM</span>
 
                     <div>
-                        <h3>Phewa Lake & Lakeside Walk</h3>
-                        <p>Nature · Relaxing · NPR 300</p>
+                        <h3 id="newActivity3Title">Relaxing Walk</h3>
+                        <p id="newActivity3Desc">Nature · Relaxing · NPR 300</p>
                     </div>
                 </div>
 
@@ -268,8 +274,8 @@
                     <span>5:00 PM</span>
 
                     <div>
-                        <h3>Lakeside Sunset</h3>
-                        <p>Nature · Free</p>
+                        <h3 id="newActivity4Title">Sunset view</h3>
+                        <p id="newActivity4Desc">Nature · Free</p>
                     </div>
                 </div>
             </div>
