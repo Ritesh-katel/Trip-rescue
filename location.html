@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Location - Trip Rescue</title>
+
+    <link rel="stylesheet" href="plan.css">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <header class="location-header">
+
+        <button
+            type="button"
+            class="back-btn"
+            onclick="history.back()"
+        >
+            ← Back
+        </button>
+
+        <h1>Choose Your Location</h1>
+
+    </header>
+
+
+    <main class="location-page">
+
+        <div class="location-card">
+
+            <h2>Where are you?</h2>
+
+            <p>
+                Search for a place or use your current location.
+            </p>
+
+            <div class="location-search">
+
+                <input
+                    type="text"
+                    id="locationSearch"
+                    placeholder="Search location..."
+                >
+
+                <button
+                    type="button"
+                    id="searchLocationBtn"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="currentLocationBtn"
+                class="current-location-btn"
+            >
+                📍 Use My Current Location
+            </button>
+
+        </div>
+
+
+        <div
+            id="locationMap"
+            class="location-map"
+        ></div>
+
+
+        <button
+            type="button"
+            id="confirmLocationBtn"
+            class="confirm-location-btn"
+        >
+            Confirm Location
+        </button>
+
+    </main>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="location.js"></script>
+
+</body>
+</html>

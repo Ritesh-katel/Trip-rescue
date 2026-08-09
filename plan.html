@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nepal Explorer Maps - Multi-Layer Support</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+ <link rel="stylesheet" href="plan.css">
+</head>
+<body>
+  <div id="map"></div>
+  <div class="layer-container">
+    <button class="layer-btn active" id="btn-dark" onclick="setMapLayer('dark')"><i data-lucide="moon" style="width:14px;"></i> Dark</button>
+    <button class="layer-btn" id="btn-satellite" onclick="setMapLayer('satellite')"><i data-lucide="globe" style="width:14px;"></i> Satellite</button>
+    <button class="layer-btn" id="btn-street" onclick="setMapLayer('street')"><i data-lucide="map" style="width:14px;"></i> Street</button>
+    <button class="layer-btn" id="btn-terrain" onclick="setMapLayer('terrain')"><i data-lucide="mountain" style="width:14px;"></i> Terrain</button>
+  </div>
+  <div class="search-container">
+    <div class="input-wrapper">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search Nepal (e.g. Itahari, Dharan, Kathmandu)..." />
+      <button class="action-btn" id="clearBtn"><i data-lucide="x" style="width:16px;height:16px;"></i></button>
+      <div class="spinner action-btn" id="loadingSpinner"><i data-lucide="loader-2" style="width:16px;height:16px;color:#6366f1;"></i></div>
+    </div>
+
+    <div class="results-list" id="resultsList"></div>
+
+    <div class="chip-group-label">Nearby Search</div>
+    <div class="filter-chips">
+      <button class="chip" onclick="searchPOI('hotel', '#3b82f6')"><i data-lucide="bed" style="width:14px;"></i> Hotels</button>
+      <button class="chip" onclick="searchPOI('park', '#22c55e')"><i data-lucide="trees" style="width:14px;"></i> Parks</button>
+      <button class="chip" onclick="searchPOI('restaurant', '#ef4444')"><i data-lucide="utensils" style="width:14px;"></i> Food</button>
+      <button class="chip" onclick="searchPOI('cafe', '#f59e0b')"><i data-lucide="coffee" style="width:14px;"></i> Cafes</button>
+    </div>
+    <div class="chip-group-label">Major Cities & Peaks</div>
+    <div class="filter-chips">
+      <button class="chip" onclick="flyToLocation(26.6636, 87.2718, 14, 'Itahari', 'Koshi Province')">Itahari</button>
+      <button class="chip" onclick="flyToLocation(26.8124, 87.2832, 14, 'Dharan', 'Hill Foothills City')">Dharan</button>
+      <button class="chip" onclick="flyToLocation(26.4525, 87.2718, 13, 'Biratnagar', 'Industrial Hub')">Biratnagar</button>
+      <button class="chip" onclick="flyToLocation(27.7172, 85.3240, 14, 'Kathmandu', 'Capital City')">Kathmandu</button>
+      <button class="chip" onclick="flyToLocation(28.2096, 83.9856, 14, 'Pokhara', 'Lake City')">Pokhara</button>
+      <button class="chip" onclick="flyToLocation(27.9881, 86.9250, 13, 'Mt. Everest', 'Sagarmatha')">Mt. Everest</button>
+    </div>
+
+  </div>
+  <div class="floating-controls">
+    <button class="btn-icon" onclick="locateUser()" title="My Location">
+      <i data-lucide="crosshair"></i>
+    </button>
+    <button class="btn-icon" onclick="map.zoomIn()" title="Zoom In">
+      <i data-lucide="plus"></i>
+    </button>
+    <button class="btn-icon" onclick="map.zoomOut()" title="Zoom Out">
+      <i data-lucide="minus"></i>
+    </button>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ 
+  <script src="plan.js"></script>
+</body>
+
+
+</html>
